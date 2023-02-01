@@ -20,7 +20,7 @@ def readFile(name):
 
 def searchName(item):
    
-   var = readFile("Save.txt")
+   var = readFile("Indicador-de-filmes-e-series/Save.txt")
 
    #Now I need the code to run over the list an see wich index is the result of the search
    i = 0

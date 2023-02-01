@@ -6,7 +6,7 @@
 import search
 import os
 
-file_name = "Save.txt"
+file_name = "Indicador-de-filmes-e-series/Save.txt"
 
 def createFile(name):
    '''
@@ -167,4 +167,3 @@ while True:
       print("Filme cadastrado com sucesso!")
       input("Aperte ENTER para continuar")
       os.system("clear")
-   
