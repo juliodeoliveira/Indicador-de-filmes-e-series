@@ -17,31 +17,37 @@ def readFile(name):
       print("Ocorreu um erro, tente novamente mais tarde!")
 
 
+var = readFile("Indicador-de-filmes-e-series/Save.txt")
 
 def searchName(item):
+   '''
+      The parameter 'item' need to be in uppercase!
+   '''
    
-   var = readFile("Indicador-de-filmes-e-series/Save.txt")
-
-   #Now I need the code to run over the list an see wich index is the result of the search
    i = 0
    while i < len(var):
       if item in var[i]:
          print("ACHADO - ",var[i])
       i += 1
 
-   # DEBUG ONLY!
-   #print("\n")
-   #print(30*"--")
-   #print("1: tudo lá do Save.txt", end=" - ")
-   #print(var)
-   #print("2: O que vc pesquisou",user, "\n")
-   #print("3: resultado da busca",result, "\n")
-  # print("4: todos os nomes do Save.txt divididos",divide, "\n")
+def searchGender(item):
+   '''
+      The parameter 'item' need to be in uppercase!
+   '''
 
+   i = 0
+   while i < len(var):
+      if item in var[i]:
+         print("Encontrado por genero: ", var[i])
+      i += 1
+   
+def searchYear(item):
+   '''
+      The parameter 'item' need to be in uppercase!
+   '''
 
-#Argument need to be in uppercase
-#search("ERA DO GELO")
-
-
-
-
+   i = 0
+   while i < len(var):
+      if item in var[i]:
+         print("Encontrado por ano: ", var[i])
+      i += 1

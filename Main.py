@@ -93,12 +93,15 @@ def readFile(name, ret=False):
    except:
       print("Ocorreu um erro, tente novamente mais tarde!")
 
-
+#Verify if the file exists
 if fileExists(file_name) == False:
    createFile(file_name)
 
+#Main loop
 while True:
    os.system("clear")
+
+   #Menu option
    print("[1] Ver filmes cadastrados")
    print("[2] Pesquisar filmes (Não programado ainda!)")
    print("[3] Cadastrar filme")
@@ -133,14 +136,14 @@ while True:
          input("Pressione ENTER para continuar...")
       
       elif option == 2:
-         look = str(input("Gênero do filme: "))
-         #search.searchName(look)
+         look = str(input("Gênero do filme: ")).upper()
+         search.searchGender(look)
 
          input("Pressione ENTER para continuar...")
 
       elif option == 3: 
-         look = int(input("Ano de lançamento do filme: "))
-         #search.search(look)
+         look = str(input("Ano de lançamento do filme: ")).upper()
+         search.searchYear(look)
 
          input("Pressione ENTER para continuar...")
 
@@ -152,16 +155,12 @@ while True:
 
       infos = [movie, year, gen]
 
-      #print(infos)
-      #print(infos[0])
-
       a = 0
       while a < 3:
-         #Escreve tudo em maiúsculo para facilitar a busca
+         
          writeFile(file_name, f'{infos[a].upper()}, ')
          a += 1
 
-      #switch to writeFile(file_name, " ") this way is better for the program show the results with [0], for example.
       writeFile(file_name, "\n")
 
       print("Filme cadastrado com sucesso!")
