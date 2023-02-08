@@ -103,7 +103,7 @@ while True:
 
    #Menu option
    print("[1] Ver filmes cadastrados")
-   print("[2] Pesquisar filmes (Não programado ainda!)")
+   print("[2] Pesquisar filmes")
    print("[3] Cadastrar filme")
    print("[0] Sair")
 
